@@ -1,9 +1,9 @@
 <div class="container">
-	<% @todos.each do |todo| %>
+	<% @todos.each do |t| %>
 
 <div class="well"> 
-<h1> <%= todo.description %> </h1>
-<p> <%= todo.completed %> </p>
+<h1> <%= t.description %> </h1>
+<p> <%= t.completed %> </p>
 </div>
 
 <% end %>

@@ -1,0 +1,13 @@
+
+
+<h1> Crear una App</h1>
+
+<%= form_with model: @todo, local: true do |t| %>
+<%= t.label :description, "Descripción app" %>
+<%= t.text_field :description %>
+
+<%= t.label :completed, "Estado" %>
+<%= t.text_field :completed %>
+<%= t.submit "enviar" %>
+
+<% end %>
