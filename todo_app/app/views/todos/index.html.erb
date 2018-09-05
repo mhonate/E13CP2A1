@@ -1,9 +1,14 @@
 <div class="container">
+
+<h5> <%= link_to "Crear nueva app", todos_new_path %> </h5>
 	<% @todos.each do |t| %>
 
 <div class="well"> 
-<h1> <%= t.description %> </h1>
+<h1> <%= link_to t.description, t %> </h1>
 <p> <%= t.completed %> </p>
+<p> <%= link_to "Borrar", t, method: :delete %> </p>
+
+
 </div>
 
 <% end %>
