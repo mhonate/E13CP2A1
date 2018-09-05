@@ -1,0 +1,11 @@
+<div class="container">
+	<% @todos.each do |todo| %>
+
+<div class="well"> 
+<h1> <%= todo.description %> </h1>
+<p> <%= todo.completed %> </p>
+</div>
+
+<% end %>
+
+</div>
