@@ -22,15 +22,28 @@ class TodosController < ApplicationController
 	end
 
 	def update
-	@todo = Todo.find(params[:id])
-	@todo.update(todo_params)
-	redirect_to todos_path
+		@todo = Todo.find(params[:id])
+		@todo.update(todo_params)
+		redirect_to todos_path
 	end
 
 	def destroy
-	@todo = Todo.find(params[:id])
-	@todo.destroy
-	redirect_to todos_path
+		@todo = Todo.find(params[:id])
+		@todo.destroy
+		redirect_to todos_path
+	end
+
+	def complete
+		@todo = Todo.find(params[:id])
+		@todo.save
+		redirect_to todos_path
+	end
+
+	def list
+		@todos = Todo.all
+		@completados = @todos.select{ |i| i.completed = true }
+		@incompletos = @todos.select{ |i| i.completed = false }
+
 	end
 
 private
