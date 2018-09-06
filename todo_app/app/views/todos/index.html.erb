@@ -1,10 +1,12 @@
 <div class="container">
 
-<h5> <%= link_to "Crear nueva app", todos_new_path %> </h5>
+<div class="well">
+<button type="button" class="btn btn-default"  > <%= link_to "Crear nueva app", todos_new_path %> </button>
+</div>
 	<% @todos.each do |t| %>
 
 <div class="well"> 
-<h1> <%= link_to t.description, t %> </h1>
+<h3> <%= link_to t.description, t %> </h3>
 <p> <%= t.completed %> </p>
 <p> <%= link_to "Borrar", t, method: :delete %> </p>
 

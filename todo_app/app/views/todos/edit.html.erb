@@ -1,17 +1,8 @@
 <div class="container">
 	
-
-
-<h1> Editar contenido </h1>
-
-<%= form_with model: @todo, local: true do |t| %>
-<%= t.label :description, "Descripción app" %>
-<%= t.text_field :description %>
-
-<%= t.label :completed, "Estado" %>
-<%= t.check_box :completed %>
-<%= t.submit "enviar" %>
-
-<% end %>
+	<div class="well">
+		<h3> Modificar Estado App</h3>
+		<%= render 'form' %>
+	</div>
 
 </div>

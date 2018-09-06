@@ -1,13 +1,7 @@
 <div class="container">
-	
-<div class="col-md-6">
-	<% @completados.each do |t|%>
-	<div class="well">
-		<%= t.description %>
-		<%= t.completed %>
-	</div>
-	<% end %>
-</div>
+
+<div class="col-md-12">
+
 
 <div class="col-md-6">
 		<% @incompletos.each do |t|%>
@@ -17,6 +11,15 @@
 	</div>
 	<% end %>
 	
+</div>
+<div class="col-md-6">
+	<% @completados.each do |t|%>
+	<div class="well">
+		<%= t.description %>
+		<%= t.completed %>
+	</div>
+	<% end %>
+</div>
 </div>
 
 
